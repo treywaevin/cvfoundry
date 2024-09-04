@@ -5,11 +5,13 @@ function Landing() {
   return (
     <Box sx={{
       display: 'flex',
-      flexDirection: {xs: 'column-reverse', md: 'row'},
+      flexDirection: {xs: 'column', md: 'row'},
       justifyContent: 'center',
       alignItems: 'center',
       height: '100vh',
+      gap: {xs: 1, md: 20},
       bgcolor: '#80ed99', // mint green
+      paddingTop: {xs: 20, md: 0},
     }}>
       <Box sx={{textAlign:'center', display:'flex', flexDirection: 'column', gap: 3}}>
         <Box>
@@ -34,12 +36,12 @@ function Landing() {
           </Typography>
         </Box>
         <Box sx={{display: 'flex', flexDirection:'column'}}>
-          <Typography variant='h7' sx={{
+          <Typography variant='subtitle1' sx={{
           }} 
           >
             No more need for Google Docs or LaTeX.
           </Typography>
-          <Typography variant='h7'>
+          <Typography variant='subtitle1'>
             Create a professional CV in minutes with our easy-to-use CV builder.
           </Typography>
         </Box>
@@ -57,7 +59,7 @@ function Landing() {
           }}
         >
           <Typography
-            variant='h7'
+            variant='subtitle1'
             color='#57cc99'
           >
             Get Started
@@ -65,7 +67,7 @@ function Landing() {
         </Button>
       </Box>
       <Box>
-        <Image src={landing} alt="Landing" width={800} height={500}/>
+        <Image src={landing} alt="Landing" width={600} height={600}/>
       </Box>
     </Box>
   );
