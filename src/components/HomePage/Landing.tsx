@@ -8,7 +8,7 @@ function Landing() {
       flexDirection: {xs: 'column', md: 'row'},
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100vh',
+      height: '80vh',
       gap: {xs: 1, md: 20},
       bgcolor: '#80ed99', // mint green
       paddingTop: {xs: 20, md: 0},

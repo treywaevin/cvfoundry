@@ -13,9 +13,13 @@
     "@emotion/styled": "^11.13.0",
     "@mui/joy": "^5.0.0-beta.48",
     "@mui/material": "^6.0.1",
+    "katex": "^0.16.11",
+    "latex.js": "^0.12.6",
     "next": "14.2.7",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-latex": "^2.0.0",
+    "react-latex-next": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
