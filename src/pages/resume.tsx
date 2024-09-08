@@ -1,10 +1,16 @@
-import Preview from '../components/ResumePage/Preview';
-
+import Preview from '../views/components/ResumePage/Preview';
+import '../styles/globals.css';
+import { ThemeProvider } from '@mui/material';
+import theme from './theme';
 export default function Resume() {
   return (
-    <div>
-      <h1>Resume</h1>
-      <Preview />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <h1 className="text-3xl font-bold underline">
+        Hello world!
+        </h1>
+        {/* <Preview /> */}
+      </div>
+    </ThemeProvider>
   );
 }

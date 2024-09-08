@@ -15,7 +15,7 @@ function Landing() {
     }}>
       <Box sx={{textAlign:'center', display:'flex', flexDirection: 'column', gap: 3}}>
         <Box>
-          <Typography variant="h2" sx=
+          <Typography variant="h3" sx=
           {{
             fontWeight: 'bold',
           }}
