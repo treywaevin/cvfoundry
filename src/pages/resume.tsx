@@ -9,7 +9,7 @@ export default function Resume() {
         <h1 className="text-3xl font-bold underline">
         Hello world!
         </h1>
-        {/* <Preview /> */}
+        <Preview />
       </div>
     </ThemeProvider>
   );
