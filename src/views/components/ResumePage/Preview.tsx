@@ -1,6 +1,6 @@
 const Preview = () => {
   return (
-    <div className="max-w-4xl mx-auto my-10 p-8 bg-white shadow-lg rounded-lg font-serif">
+    <div className="max-w-4xl p-8 bg-white shadow-lg rounded-lg font-serif">
       {/* Header */}
       <div className="flex justify-center items-center pb-2 mb-2">
         <div>
