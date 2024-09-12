@@ -1,4 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
+import Link from "next/link";
 import landing from "@/images/landing.png";
 import Image from "next/image";
 function Landing() {
@@ -45,26 +46,28 @@ function Landing() {
             Create a professional CV in minutes with our easy-to-use CV builder.
           </Typography>
         </Box>
-        <Button
-          variant='outlined'
-          sx={{
-            padding: {xs: '1', md: '3'},
-            transition: 'transform 0.1s ease-in-out',
-            '&:hover': {
-              transform: 'scale(1.1)',
-            },
-            width: '50%',
-            alignSelf: 'center',
-            bgcolor: 'white',
-          }}
-        >
-          <Typography
-            variant='subtitle1'
-            color='#57cc99'
+        <Link href="/sign-up">
+          <Button
+            variant='outlined'
+            sx={{
+              padding: {xs: '1', md: '3'},
+              transition: 'transform 0.1s ease-in-out',
+              '&:hover': {
+                transform: 'scale(1.1)',
+              },
+              width: '50%',
+              alignSelf: 'center',
+              bgcolor: 'white',
+            }}
           >
-            Get Started
-          </Typography>
-        </Button>
+            <Typography
+              variant='subtitle1'
+              color='#57cc99'
+            >
+              Get Started
+            </Typography>
+          </Button>
+        </Link>
       </Box>
       <Box>
         <Image src={landing} alt="Landing" width={600} height={600}/>

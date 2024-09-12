@@ -13,15 +13,14 @@ import {
 
 export default function Resume() {
   return (
-
-    <ThemeProvider theme={theme}>
+    <>
       <SignedIn>
         <ResumeTopBar />
         <Preview />
       </SignedIn>
       <SignedOut>
-        <SignIn routing="hash"/>
+        <SignIn/>
       </SignedOut>
-    </ThemeProvider>
+    </>
   );
 }

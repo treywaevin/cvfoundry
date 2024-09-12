@@ -1,4 +1,5 @@
 import { AppBar, Typography, Button, CssBaseline, Toolbar, Divider, Icon } from "@mui/material";
+import { UserButton } from "@clerk/nextjs";
 import logo from "@/images/logo.png";
 
 function ResumeTopBar() {
@@ -28,6 +29,7 @@ function ResumeTopBar() {
               color: 'black',
               ml: 1,
             }}>CVFoundry</Typography>
+          <UserButton />
         </Toolbar>
     </AppBar>
   </>

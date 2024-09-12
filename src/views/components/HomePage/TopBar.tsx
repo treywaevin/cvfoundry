@@ -1,4 +1,5 @@
 import { AppBar, Typography, Button, CssBaseline, Toolbar, Divider, Icon } from "@mui/material";
+import { SignInButton } from "@clerk/nextjs";
 import logo from "@/images/logo.png";
 function TopBar() {
   return (
@@ -38,9 +39,7 @@ function TopBar() {
                 backgroundColor: '#adc178',
               }
             }}>
-              <Typography variant="subtitle1" sx={{color: 'white'}}>
-                Sign In
-              </Typography>
+              <SignInButton />
             </Button>
           </Toolbar>
       </AppBar>
