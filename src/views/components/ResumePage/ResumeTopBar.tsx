@@ -14,9 +14,9 @@ function ResumeTopBar() {
       <Toolbar></Toolbar>
     </AppBar>
     <AppBar style={{
-        backgroundColor: '#80ed99',
         boxShadow: 'none',
         position: 'fixed',
+        backgroundColor: 'white',
       }}>
         <Toolbar>
           <Icon>

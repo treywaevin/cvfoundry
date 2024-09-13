@@ -18,6 +18,9 @@ const config: Config = {
       fontSize : {
         'med-lg': '16px',
       },
+      colors : {
+        'mint': '#80ed99'
+      }
     },
   },
   plugins: [],
