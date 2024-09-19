@@ -4,6 +4,33 @@ import AddIcon from '@mui/icons-material/Add';
 import { useState } from "react";
 export default function CreateCard() {
   const [open, setOpen] = useState(false);
+  const [resumeName, setName] = useState('');
+  const handleInputChange = (event: any) => {
+    const {value, name} = event.target;
+    setName(value);
+  }
+  const onSubmit = (event: any) => {
+    event.preventDefault();
+    const newResume = {
+      userId: 'test',
+      tile: resumeName,
+    }
+    fetch('/api/resume', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newResume)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+    handleClose();
+  }
   const handleClose = () => {
     setOpen(false);
   };
@@ -41,11 +68,13 @@ export default function CreateCard() {
           </div>
           <Typography variant="body1" sx={{color: 'black', paddingBottom: 2}}>Add a title for your new resume.</Typography>
           <div className='flex flex-col'>
-            <TextField sx={{paddingBottom: 3}}label="Title" variant="outlined" />
-            <div className='flex flex-row justify-end space-x-1'>
-              <Button variant="contained" onClick={handleClose}>Cancel</Button>
-              <Button variant="contained" onClick={handleClose}>Create</Button>
-            </div>
+            <Box component='form'>
+              <TextField sx={{paddingBottom: 3}}label="Title" variant="outlined" onChange={handleInputChange} />
+              <div className='flex flex-row justify-end space-x-1'>
+                <Button variant="contained" onClick={handleClose}>Cancel</Button>
+                <Button variant="contained" onClick={onSubmit}>Create</Button>
+              </div>
+            </Box>
           </div>
         </Box>
       </Backdrop>
